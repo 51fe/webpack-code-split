@@ -1,5 +1,5 @@
 {
-  "name": "webpack code splitting optimization",
+  "name": "webpack-code-splitting-optimization",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -13,8 +13,7 @@
     "vue": "^2.5.16",
     "vue-baidu-map": "^0.21.1",
     "vue-echarts": "^4.1.0",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.11",
@@ -22,7 +21,7 @@
     "@vue/cli-service": "^3.0.0-beta.11",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.0",
-    "sass": "^1.4.0",
+    "sass-node": "^4.8.0",
     "sass-loader": "^7.0.0",
     "vue-template-compiler": "^2.5.16"
   }
