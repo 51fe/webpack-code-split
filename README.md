@@ -1,7 +1,7 @@
 # code-split
 
 ## Before optimization:
-![Snapshot](https://github.com/51fe/webpack-code-splitting-optimization/blob/master/before.png?raw=true)
+![Snapshot](https://github.com/51fe/webpack-code-splitting-optimization/blob/before-optimization/before.png?raw=true)
 
 ## Project setup
 ```
