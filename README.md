@@ -1,7 +1,12 @@
-# code-split
+# Webpack code splitting optimization
 
-## Before optimization:
-![Snapshot](https://github.com/51fe/vue-cuisine/blob/master/before.png?raw=true)
+## Snapshots
+
+### Before optimization
+![before optimize](https://www.riafan.com/uploads/1805/split-before.png)
+
+### After optimization
+![after optimize](https://www.riafan.com/uploads/1805/split-after.png)
 
 ## Project setup
 ```
@@ -11,16 +16,6 @@ npm install
 ### Compiles and hot-reloads for development
 ```
 npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
 ```
 
 ### Customize configuration

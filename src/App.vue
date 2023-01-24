@@ -22,25 +22,24 @@
 </template>
 
 <style lang="scss">
-  @import "styles/variables";
   @import "styles/app";
 
   #app {
     flex-direction: column;
     overflow: hidden;
-    color: $text;
+    color: $--color-text-primary;
 
     #nav {
       padding: 16px 24px;
-      border-bottom: 1px solid $border;
+      border-bottom: 1px solid $--border-color-base;
 
       a {
         font-size: 16px;
         font-weight: bold;
-        color: $primary-dark;
+        color: $--color-text-primary;
 
         &.router-link-exact-active {
-          color: $primary-light;
+          color: $--color-primary;
         }
       }
 

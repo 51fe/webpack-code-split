@@ -61,7 +61,6 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "~@/styles/variables.scss";
   .tabs {
     label {
       display: inline-block;
@@ -86,14 +85,14 @@ export default {
       li {
         padding-left: 8px;
         margin-top: 8px;
-        border: 1px solid $primary-light;
+        border: 1px solid $--color-primary;
 
         .close {
           padding-left: 8px;
           padding-right: 8px;
           margin-left: 4px;
           display: inline-flex;
-          background-color: $primary;
+          background-color: $--color-primary;
           color: #fff;
           cursor: pointer;
         }
@@ -104,10 +103,10 @@ export default {
       li {
         cursor: pointer;
         &:hover {
-          color: $primary-light;
+          color: $--link-hover-color;
         }
         &.active {
-          color: $primary;
+          color: $--color-primary-light-2;
         }
       }
     }

@@ -12,6 +12,7 @@
         <el-select
           v-model="form.region"
           placeholder="请选择活动区域"
+          style="width: 100%;"
         >
           <el-option
             label="区域一"
@@ -26,13 +27,8 @@
       <el-form-item label="活动时间">
         <el-date-picker
           v-model="form.date1"
-          type="date"
-          placeholder="选择日期"
-          style="width: 100%;"
-        />
-        <el-time-picker
-          v-model="form.date2"
-          placeholder="选择时间"
+          type="datetime"
+          placeholder="选择日期时间"
           style="width: 100%;"
         />
       </el-form-item>

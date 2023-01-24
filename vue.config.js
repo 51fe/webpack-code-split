@@ -8,7 +8,6 @@ function resolve(dir) {
 // use administrator privileges to execute the command line.
 // For example, Mac: sudo npm run
 // You can change the port by the following method:
-// port = 9527 npm run dev OR npm run dev --port = 9527
 const port = process.env.port || process.env.npm_config_port || 8080 // dev port
 
 // All configuration item explanations can be find in https://cli.vuejs.org/config/
@@ -33,6 +32,14 @@ module.exports = {
       errors: true
     }
   },
+  css: {
+    loaderOptions: {
+      scss: {
+        // additionalData: `@import "~@/styles/variables.scss";`,
+        prependData: `@import "~@/styles/variables.scss";`,
+      }
+    }
+  },
   transpileDependencies: [
     'vue-echarts',
     'resize-detector',
@@ -45,6 +52,37 @@ module.exports = {
     resolve: {
       alias: {
         '@': resolve('src'),
+      }
+    },
+    optimization: {
+      splitChunks: {
+        maxInitialRequests: 5,
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendor',
+            priority: 10,
+            chunks: 'initial', // only package third parties that are initially dependent
+          },
+          echarts: {
+            name: 'echarts', // split elementUI into a single package
+            priority: 30, // the weight needs to be larger than libs and app or it will be packaged into libs or app
+            test: /[\\/]node_modules[\\/]echarts/, // in order to adapt to cnpm
+            chunks: 'all'
+          },
+          elementUI: {
+            name: 'element-ui', // split elementUI into a single package
+            priority: 30, // the weight needs to be larger than libs and app or it will be packaged into libs or app
+            test: /[\\/]node_modules[\\/]_?element-ui(.*)/, // in order to adapt to cnpm
+            chunks: 'all'
+          },
+          elementCSS: {
+            test: resolve('./theme'), // can customize your rules,
+            name: 'element-ui',
+            chunks: 'all',
+            priority: 5,
+          }
+        }
       }
     }
   }
