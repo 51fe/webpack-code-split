@@ -3,10 +3,10 @@
 ## Snapshots
 
 ### Before optimization
-![before optimize](https://www.riafan.com/uploads/1805/split-before.png)
+![before optimize](https://51fe.site/uploads/1805/split-before.png)
 
 ### After optimization
-![after optimize](https://www.riafan.com/uploads/1805/split-after.png)
+![after optimize](https://51fe.site/uploads/1805/split-after.png)
 
 ## Project setup
 ```
